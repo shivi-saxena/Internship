@@ -1,0 +1,11 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& pr) {
+        int mi=INT_MAX,p=0;
+        for(int i=0;i<pr.size();i++){
+            mi=min(mi,pr[i]);
+            p=max(p,pr[i]-mi);
+        }
+        return p;
+    }
+};
